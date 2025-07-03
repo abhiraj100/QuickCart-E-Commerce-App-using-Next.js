@@ -4,6 +4,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const AddProduct = () => {
   const { getToken } = useAppContext();
@@ -18,7 +19,7 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new formData();
+    const formData = new FormData();
     formData.append("name", name);
     formData.append("description", description);
     formData.append("category", category);
