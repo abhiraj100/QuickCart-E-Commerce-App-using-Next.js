@@ -1,4 +1,3 @@
-import { PhoneNumber } from "@clerk/nextjs/dist/types/server";
 import mongoose from "mongoose";
 
 const addressSchema = new mongoose.Schema({
@@ -10,7 +9,7 @@ const addressSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  PhoneNumber: {
+  phoneNumber: {
     type: String,
     required: true,
   },
